@@ -2,20 +2,37 @@
   "name": "CST463 Laravel Lab",
   "image": "mcr.microsoft.com/devcontainers/php:8.4",
   "features": {
-    "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/devcontainers/features/sqlite:1": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "hostRequirements": { "cpus": 2 },
-  "forwardPorts": [8000],
+  "hostRequirements": {
+    "cpus": 2
+  },
+  "forwardPorts": [
+    8000
+  ],
   "portsAttributes": {
-    "8000": { "label": "Laravel app", "onAutoForward": "openBrowser" }
+    "8000": {
+      "label": "Laravel app",
+      "onAutoForward": "openBrowser"
+    }
   },
   "postCreateCommand": "bash .devcontainer/setup.sh",
   "customizations": {
-    "codespaces": { "openFiles": ["README.md", "routes/web.php"] },
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "routes/web.php"
+      ]
+    },
     "vscode": {
-      "extensions": ["onecentlin.laravel-blade", "bmewburn.vscode-intelephense-client"],
-      "settings": { "workbench.startupEditor": "none", "editor.fontSize": 15 }
+      "extensions": [
+        "onecentlin.laravel-blade",
+        "bmewburn.vscode-intelephense-client"
+      ],
+      "settings": {
+        "workbench.startupEditor": "none",
+        "editor.fontSize": 15
+      }
     }
   }
 }
